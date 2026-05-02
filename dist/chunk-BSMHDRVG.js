@@ -1,0 +1,1 @@
+import{a as o}from"./chunk-RYDFAFU3.js";import{useState as c,useEffect as n}from"react";function g(){let[e,t]=c(void 0);return n(()=>{let r=o.getInstance().get("image.protocol");t(r)},[]),e}export{g as a};

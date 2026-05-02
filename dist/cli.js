@@ -1,0 +1,2 @@
+#!/usr/bin/env node
+import{b as r}from"./chunk-RYDFAFU3.js";import{dirname as t}from"node:path";import{fileURLToPath as a}from"node:url";import{readPackageUp as o}from"read-package-up";import e from"pastel";import{render as n}from"ink";await r();var m=t(a(import.meta.url)),i=await o({cwd:m}),p=new e({importMeta:import.meta,name:"instagram-cli",version:i?.packageJson.version,description:i?.packageJson.description});n(null,{exitOnCtrlC:!1});try{await p.run()}catch{process.exit(1)}

@@ -14,10 +14,10 @@ index d4485a0..f22b2e3 100644
  exports.BREADCRUMB_KEY = 'iN4$aGr0m';
  exports.SIGNATURE_VERSION = '4';
 diff --git a/node_modules/instagram-private-api/dist/core/state.js b/node_modules/instagram-private-api/dist/core/state.js
-index abc1234..def5678 100644
+index 34edc2f..04b2cac 100644
 --- a/node_modules/instagram-private-api/dist/core/state.js
 +++ b/node_modules/instagram-private-api/dist/core/state.js
-@@ -86,7 +86,7 @@
+@@ -86,7 +86,7 @@ class State {
          return `Instagram ${this.appVersion} Android (${this.deviceString}; ${this.language}; ${this.appVersionCode})`;
      }
      get webUserAgent() {
@@ -26,6 +26,14 @@ index abc1234..def5678 100644
      }
      get devicePayload() {
          const deviceParts = this.deviceString.split(';');
+@@ -175,6 +175,7 @@ class State {
+         const obj = {
+             constants: this.constants,
+             cookies: JSON.stringify(await this.serializeCookieJar()),
++            authorization: this.authorization,
+         };
+         for (const [key, value] of Object.entries(this)) {
+             obj[key] = value;
 diff --git a/node_modules/instagram-private-api/dist/entities/direct-thread.entity.d.ts b/node_modules/instagram-private-api/dist/entities/direct-thread.entity.d.ts
 index 93eb781..2cadf27 100644
 --- a/node_modules/instagram-private-api/dist/entities/direct-thread.entity.d.ts
